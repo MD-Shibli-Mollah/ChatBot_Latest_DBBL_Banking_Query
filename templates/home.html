@@ -3,14 +3,14 @@
 <div id="chat-frame" style="display: none; right:20px; bottom: 20px;">
 <iframe
         id="full_iframe"
-        src="https://b07d4713.ngrok.io/bot"
+        src="https://e5a935db.ngrok.io/bot"
         style="position:absolute;right:65px;bottom:80px; border-radius:15px"
         width="350"
         height="430"
         align="bottom" class="border shadow">
 </iframe>
 </div>
-<button class="btn btn-sm btn-light rounded-circle m-l-5 chat-closed" id="chat-button" style="position: absolute; right:20px; bottom: 20px; background: url(static/images/chat_logo.jpg) round; width: 60px; height: 60px;"></button>
+<button class="btn btn-sm btn-light rounded-circle m-l-5 chat-closed" id="chat-button" style="position: absolute; right:20px; bottom: 20px; background: url(static/images/chat_logo_1.jpg) round; width: 60px; height: 60px;"></button>
 <script type="text/javascript">
 $(document).ready(function(){
     $(".chat-closed").on("click",function(e){
@@ -26,7 +26,7 @@ $(document).ready(function(){
         } else {
             x.style.display = 'none';
             var b = document.getElementById('chat-button');
-            b.style.backgroundImage = "url('static/images/chat_logo.jpg')";
+            b.style.backgroundImage = "url('static/images/chat_logo_1.jpg')";
         }
     });
 });

@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "easy-recharge-chat-bot",
+  "private_key_id": "fe46fd8705c3f8a92f2d20f35954545a61866c44",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCkF2W7qcAuky1U\nY6L8mpcAGtILkQzlJ6VSfxwhVqx2Gdz22g1MWNfx3JK/Y01bF6B7Y2dKaqNceAzz\n850dfJyiQzfoBCVx2Im3rRagtWSbfR/ERvvIDzrh392JBkCgeIPvF5g1gVA7EQ/N\nGHHObyU2C0Bv6nmxHT/B8w+Q7n9Wi2M/XsEYmGpJos9sTjoIbzl71oRJPoZZz869\nW6x30oSPJf6AjkbVuF9QsuThwhcI/bXK7Pbbjh9qpOP2B2REkY1xQnptGo66wZob\n5yjg1nS7mKq0RsXLnDnHCt7AIKBOF+his7z6ZijzNwl4I3QB6oED1jPcaMjw0VgW\nIumX2f1tAgMBAAECggEAAK1ydEm2JNSv8KCpfdHrL7GGQbMrbELNC7/0m/qhcBD/\nq/eohTLH6Xq+Rfk6yrzlPIn9IjFTuiadi+BRbluJj6En0ooGpMEYVUbRe7Mw1o3r\nGw9dkmAY7FfVSiLzEpAmbOiAocmGTRTvJysKEg68oGV/5ZzNPDr64wOGG+4WkbZN\n7rVR0jNOby+RoOAI/P5u3icnMmZRg6BNz6OBhBa1WWhe+Nu3Rm+Qw/nOKzYxQ4MH\nB2M1roJqFtuRpP9TyM7rgm8U1lAymVXmaA7rdoA4yhGhaAw1mFrwNoWtVxV7Gvgu\nSwy9vvJ0S24Xg/qVwA0uF/+HTJPua4kyUxwFYb95wQKBgQDNuOCbz76eicMXdDAm\n0cNqPSwKbR12yXoVTnH5Bbh52Zicy8MVYrA5enXg+ZmlAzE3XhJaxAytMtKgnhDi\nON0+AFNQcvLsZt4bZauMybqwQ5IvsYy2kMnzihcYKHYwl86VX7OI1bOhldgSKAj7\n8tkyj1d9bXntugwGi4Tv8lSi0QKBgQDMMd3zyZTkEfzX52gvYNg3IkPIbSS8vhs5\nNCW5IIeO20fFlLvuIvU5wmYgRan7eqTQ5/4dll/EpSERC70BccdPGzsoqGIuyLns\nfhuEzEpqsqlRf/fj7zNeZk3Hw7tJQUYMaGJoSBRPd999laMlJph0INftZH9qANSW\nUDPugzg/3QKBgBCFS0xX95flukwU4ZUMfWP3u6SutJIIhgxV+2MjKXhnmBDncCg0\nf7Bt/C9v+/27buViYZj2a4oxLacGapawOFw1THuGb6m6bRXIKWmp/ZsQIhpAaOt0\nXzN2oHopLayjVEy8nb9cYguU7AAxRN9u1jBwQHdrJkKIEVUpOSjHzjIxAoGBAMJe\n9ZgKWuB+/t/GNzZiSW6x/zPaMQ45KFDbgs0mWeNyeG9rlTipriS9F9nAdn4b0KfL\nLemcKq1VQpSnR9MIK2Dx2u5o2o0OJW0o3akbjfri9qnN1nnySEOjvoZZmv2wVK2a\n75G0iyDaSrOQrSvAAX8JhIFFGMQe5j3vOn/gCLtBAoGAZ/2DWiJT38kfyDohFZG8\nsbNW/B6nIR5SsXvaAkhZm2R/zsZiitaQYetnIiMekbO3Ae7vsSgZa1AvI7E/LIWt\nrCneyyNX50mpHwzJ5AeGSU8rkA6eeDr8YHk3Y5fQ/yXqPweIdy+RLBqtn04bMze3\ntt5B3BRoY+1lJbR8Qs//O1I=\n-----END PRIVATE KEY-----\n",
+  "client_email": "dialogflow-ephqyy@easy-recharge-chat-bot.iam.gserviceaccount.com",
+  "client_id": "116440691599916218287",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/dialogflow-ephqyy%40easy-recharge-chat-bot.iam.gserviceaccount.com"
+}

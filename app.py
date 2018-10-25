@@ -21,7 +21,7 @@ mysql = MySQL()
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = ''
-app.config['MYSQL_DB'] = 'ccbot_db'
+app.config['MYSQL_DB'] = 'ssl_bot_db'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 
 # Initialize the app for use with this MySQL class
@@ -182,6 +182,7 @@ def index():
 @app.route('/bot', methods=['GET', 'POST'])
 def bot():
     if request.method == 'GET':
+        #NO LOG IN is set up yet
         if 'logged_in' in session:
             uid = session['uid']
             cur = mysql.connection.cursor()
@@ -190,20 +191,20 @@ def bot():
             # Close Connection
             cur.close()
             return render_template('index.html', messages=messages)
-        else:
+        else: #Must execute
             now = datetime.now()
             now_hour = now.strftime("%H")
             if 5 <= int(now_hour) < 12:
-                reply = "Good Morning. I'm Emi, your virtual assistant. How can I help you?"
+                reply = "Good Morning. I'm your Virtual Assistant. How can I help you?"
                 return render_template('index.html', reply=reply)
             elif 12 <= int(now_hour) < 18:
-                reply = "Good Afternoon. I'm Emi, your virtual assistant. How can I help you?"
+                reply = "Good Afternoon. I'm your Virtual Assistant. How can I help you?"
                 return render_template('index.html', reply=reply)
-            elif 18 <= int(now_hour) < 20:
-                reply = "Good Evening. I'm Emi, your virtual assistant. How can I help you?"
+            elif 18 <= int(now_hour) < 19:
+                reply = "Good Evening. I'm your Virtual Assistant. How can I help you?"
                 return render_template('index.html', reply=reply)
             else:
-                reply = "Hi... I'm Emi, your virtual assistant. How can I help you?"
+                reply = "Hi... I'm your Virtual Assistant. How can I help you?"
                 return render_template('index.html', reply=reply)
 
     if request.method == 'POST':
@@ -1226,19 +1227,19 @@ def bot():
             else:
                 wish = "Hi.."
             reply = {
-                "fulfillmentText": wish + ". I'm Emi, your virtual assistant. How can I help you?",
+                "fulfillmentText": wish + ". I'm Shibli, your virtual assistant. How can I help you?",
                 "fulfillmentMessages": [
                     {
                         "text": {
                             "text": [
-                                wish + ". I'm Emi, your virtual assistant. How can I help you?"
+                                wish + ". I'm Shibli, your virtual assistant. How can I help you?"
                             ]
                         }
                     },
                     {
                         "text": {
                             "text": [
-                                wish + ". I'm Emi, your virtual assistant. How can I help you?"
+                                wish + ". I'm Shibli, your virtual assistant. How can I help you?"
                             ]
                         },
                         "platform": "FACEBOOK"
@@ -1269,6 +1270,7 @@ def bot():
 def send_message():
     message = request.form['message']
     project_id = os.getenv('DIALOGFLOW_PROJECT_ID')
+    #log in is not workable, it's not necessary
     if 'logged_in' in session:
         uid = session['uid']
         fulfillment_text = detect_intent_texts(project_id, uid, message, 'en')
@@ -1285,8 +1287,13 @@ def send_message():
         # Close Connection
         cur.close()
     else:
+
         fulfillment_text = detect_intent_texts(project_id, "unique", message, 'en')
         response_text = {"message": fulfillment_text}
+
+        cur = mysql.connection.cursor() #DB MAIN Sh
+        cur.execute("INSERT INTO messages(user_id, users_text, agent_text, session) " "VALUES(%s, %s, %s, %s)",
+                    ('', message, fulfillment_text, ''))
     return jsonify(response_text)
 
 
